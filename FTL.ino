@@ -79,19 +79,34 @@ void ride(int dir, int ftlSpeedl, int ftlSpeedr){ //0-stop, 1-forward, 2-backwar
   }
 }
 
+int prev1, prev2 = 0;
+
 // the loop function runs over and over again forever
 void loop() {
- ride(1,200,200);
- delay(1000);
- ride(2,200,200);
- delay(1000);
- ride(3,200,200);
- delay(1000);
- ride(4,200,200);
- delay(1000);
- ride(0,200,200);
- delay(1000);
  int sensor1Val = digitalRead(sensor1Port);
  int sensor2Val = digitalRead(sensor2Port);
- Serial.println(sensor1Val);
+ if(sensor1Val == 1 and sensor2Val == 1){
+    ride(1,70,70);
+ }else{
+  if(sensor1Val == 1 and sensor2Val == 0){
+    if(prev1 == 0 and prev2 == 0){
+      ride(1,70,70);
+      delay(200);
+    }
+    ride(1,40,70);
+  }
+  if(sensor1Val == 0 and sensor2Val == 1){
+    if(prev1 == 0 and prev2 == 0){
+      ride(1,70,70);
+      delay(200);
+    }
+    ride(1,70,40);
+  }
+  if(sensor1Val == 0 and sensor2Val == 0){
+    ride(0,100,100);
+  }
+ }
+ prev1 = sensor1Val;
+ prev2 = sensor2Val;
+ delay(100);
 }
