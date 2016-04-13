@@ -1,16 +1,32 @@
+#define l_engine_speed 5
+#define r_engine_speed 6
 
-int l_engine_speed = 5;
-int r_engine_speed = 6;
+#define l_engine_dir1 8
+#define l_engine_dir2 9
+#define r_engine_dir1 10
+#define r_engine_dir2 11
 
-int l_engine_dir1 = 8;
-int l_engine_dir2 = 9;
-int r_engine_dir1 = 10;
-int r_engine_dir2 = 11;
+#define changeColor 1
 
-int sensor1Port = 12;
-int sensor2Port = 13;
+#define topSpeed 150
+#define maxTurn 100
 
-int isBlack = 1;
+int sensorPorts[] = {12, 13, 14, 15, 16};
+int sensorCount = 5;
+
+int kp = 1;
+int kd = 1;
+int ki = 1;
+
+int proportional = 0;
+int derivative = 0;
+int integral = 0;
+
+int dir = 0;
+int lastDir = 0;
+
+void ride(int dir, int ftlSpeedl, int ftlSpeedr);
+void readAndCalc();
 
 // the setup function runs once when you press reset or power the board
 void setup() {
@@ -22,8 +38,49 @@ void setup() {
   pinMode(l_engine_dir2, OUTPUT);
   pinMode(r_engine_dir1, OUTPUT);
   pinMode(r_engine_dir2, OUTPUT);
-  pinMode(sensor1Port, INPUT);
-  pinMode(sensor2Port, INPUT);
+
+  for(int i = 0; i < sensorCount; i++){
+    pinMode(sensorPorts[i], INPUT);
+  }
+
+  ride(1, 100, 100);
+}
+
+// the loop function runs over and over again forever
+void loop() {
+  
+  readAndCalc();
+  
+  derivative = dir - lastDir;
+  integral += proportional;
+
+  if(integral > topSpeed)
+      integral = topSpeed;
+  if(integral < -topSpeed)
+      integral = -topSpeed;
+  
+  int turn = proportional*kp + derivative*kd + integral*ki;
+
+   if(turn >= maxTurn)
+      turn = maxTurn;
+   if(turn <= -maxTurn)
+      turn = -maxTurn;
+   
+   int speedL=0;
+   int speedR=0;
+  
+   if(turn>=0){
+     speedL=topSpeed;
+     speedR=topSpeed - turn;
+   }
+   else{
+     speedL=topSpeed - turn;
+     speedR=topSpeed;
+   }
+
+   ride(1, speedL, speedR);
+
+   lastDir = dir;
 }
 
 void ride(int dir, int ftlSpeedl, int ftlSpeedr){ //0-stop, 1-forward, 2-backward, 3-FB, 4-BF
@@ -79,34 +136,53 @@ void ride(int dir, int ftlSpeedl, int ftlSpeedr){ //0-stop, 1-forward, 2-backwar
   }
 }
 
-int prev1, prev2 = 0;
+void readAndCalc(){
+   int sum = 0;
+   int posLeft = 10;
+   int posRight = 10;
+   
+   for(int i = 0; i < sensorCount/2; i++){    //czytaj sensory po lewej
+      sum += changeColor ^ digitalRead(sensorPorts[i]); // liczba aktywnych sensorow
+      if((changeColor ^ digitalRead(sensorPorts[i])) == 1){ // ustal ktory jest aktywny
+        posLeft = i - sensorCount/2;
+      }
+   }
+   
+   for(int i = sensorCount - 1; i >= sensorCount/2; i--){   //czytaj sensory po prawej
+      sum += changeColor ^ digitalRead(sensorPorts[i]);
+      if((changeColor ^ digitalRead(sensorPorts[i])) == 1){
+        posRight = i - sensorCount/2 - 1;
+      }
+   }
 
-// the loop function runs over and over again forever
-void loop() {
- int sensor1Val = digitalRead(sensor1Port);
- int sensor2Val = digitalRead(sensor2Port);
- if(sensor1Val == 1 and sensor2Val == 1){
-    ride(1,70,70);
- }else{
-  if(sensor1Val == 1 and sensor2Val == 0){
-    if(prev1 == 0 and prev2 == 0){
-      ride(1,70,70);
-      delay(200);
-    }
-    ride(1,40,70);
-  }
-  if(sensor1Val == 0 and sensor2Val == 1){
-    if(prev1 == 0 and prev2 == 0){
-      ride(1,70,70);
-      delay(200);
-    }
-    ride(1,70,40);
-  }
-  if(sensor1Val == 0 and sensor2Val == 0){
-    ride(0,100,100);
-  }
- }
- prev1 = sensor1Val;
- prev2 = sensor2Val;
- delay(100);
-}
+/*   if(sum >= 3){
+      sum = 2;
+   }
+*/
+   if(sum == 0){ // jesli zaden czyjnik nie jest aktywny
+      if(lastDir < 0){
+        dir = -sensorCount;
+      }else{
+        dir = sensorCount;
+      }
+   }else{
+       if((posLeft != 10) && (posRight != 10)){ // jesli sa aktywne po lewej i prawej
+         dir = 0;
+       }
+       else{
+          if(posRight != 10){
+            dir = posRight*2 + sum;
+          }
+          else{
+            if(posLeft != 10){
+              dir = posLeft*2 - sum;
+            }
+          }
+       }
+   }
+
+   proportional = dir;
+}   
+   
+
+
