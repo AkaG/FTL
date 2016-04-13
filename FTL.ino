@@ -74,7 +74,7 @@ void loop() {
      speedR=topSpeed - turn;
    }
    else{
-     speedL=topSpeed - turn;
+     speedL=topSpeed + turn;
      speedR=topSpeed;
    }
 
