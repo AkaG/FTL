@@ -9,14 +9,14 @@
 #define changeColor 1
 
 #define topSpeed 150
-#define maxTurn 100
+#define maxTurn 120
 
-int sensorPorts[] = {12, 13, 14, 15, 16};
+int sensorPorts[] = {4, 2, 3, 13, 7};
 int sensorCount = 5;
 
-int kp = 1;
-int kd = 1;
-int ki = 1;
+float kp = 20;
+float kd = 1;
+float ki = 3;
 
 int proportional = 0;
 int derivative = 0;
@@ -54,10 +54,10 @@ void loop() {
   derivative = dir - lastDir;
   integral += proportional;
 
-  if(integral > topSpeed)
-      integral = topSpeed;
-  if(integral < -topSpeed)
-      integral = -topSpeed;
+  if(integral > maxTurn)
+      integral = maxTurn;
+  if(integral < -maxTurn)
+      integral = -maxTurn;
   
   int turn = proportional*kp + derivative*kd + integral*ki;
 
@@ -70,12 +70,12 @@ void loop() {
    int speedR=0;
   
    if(turn>=0){
-     speedL=topSpeed;
-     speedR=topSpeed - turn;
+     speedL = topSpeed;
+     speedR = topSpeed - turn;
    }
    else{
-     speedL=topSpeed + turn;
-     speedR=topSpeed;
+     speedL = topSpeed + turn;
+     speedR = topSpeed;
    }
 
    ride(1, speedL, speedR);
@@ -141,24 +141,24 @@ void readAndCalc(){
    int posLeft = 10;
    int posRight = 10;
    
-   for(int i = 0; i < sensorCount/2; i++){    //czytaj sensory po lewej
+   for(int i = sensorCount/2 - 1; i >= 0; i--){    //czytaj sensory po lewej
       sum += changeColor ^ digitalRead(sensorPorts[i]); // liczba aktywnych sensorow
       if((changeColor ^ digitalRead(sensorPorts[i])) == 1){ // ustal ktory jest aktywny
         posLeft = i - sensorCount/2;
       }
    }
    
-   for(int i = sensorCount - 1; i >= sensorCount/2; i--){   //czytaj sensory po prawej
+   for(int i = sensorCount/2; i < sensorCount; i++){   //czytaj sensory po prawej
       sum += changeColor ^ digitalRead(sensorPorts[i]);
       if((changeColor ^ digitalRead(sensorPorts[i])) == 1){
-        posRight = i - sensorCount/2 - 1;
+        posRight = i - sensorCount/2;
       }
    }
 
-/*   if(sum >= 3){
-      sum = 2;
+   if(sum >= sensorCount/2){
+      sum = sensorCount/2;
    }
-*/
+
    if(sum == 0){ // jesli zaden czyjnik nie jest aktywny
       if(lastDir < 0){
         dir = -sensorCount;
@@ -171,11 +171,11 @@ void readAndCalc(){
        }
        else{
           if(posRight != 10){
-            dir = posRight*2 + sum;
+            dir = 2*posRight + sum;
           }
           else{
             if(posLeft != 10){
-              dir = posLeft*2 - sum;
+              dir = 2*posLeft - sum;
             }
           }
        }
