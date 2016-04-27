@@ -8,15 +8,16 @@
 
 #define changeColor 1
 
-#define topSpeed 130
-#define maxTurn 100
+#define topSpeed 255
+#define maxTurn 255
 
 int sensorPorts[] = {4, 2, 3, 13, 7};
 int sensorCount = 5;
 
-int kp = 10;
-int kd = 0;
-int ki = 0;
+int kp = 90;
+int kd = kp/6;
+int ki = 1;
+int kiMax = kp / 2;
 
 int proportional = 0;
 int derivative = 0;
@@ -44,7 +45,7 @@ void setup() {
     pinMode(sensorPorts[i], INPUT);
   }
 
-  ride(1, 100, 100);
+  ride(1, 90, 255);
 }
 
 void loop() {
@@ -53,6 +54,13 @@ void loop() {
   
   derivative = error - lastError;
   integral += error;
+
+  if(integral >= kiMax){
+    integral = kiMax;
+  }
+  if(integral <= -kiMax){
+    integral = -kiMax;
+  }
 
   int turn = proportional*kp + derivative*kd + integral*ki;
 
@@ -65,17 +73,18 @@ void loop() {
    int speedR=0;
   
    if(turn>=0){
-     speedL = topSpeed;
+     speedL = topSpeed*95/255;
      speedR = topSpeed - turn;
    }
    else{
-     speedL = topSpeed + turn;
+     speedL = ((topSpeed + turn)*95)/255;
      speedR = topSpeed;
    }
 
    ride(1, speedL, speedR);
 
    lastError = error;
+ //  delay(50);
    
 }
 
