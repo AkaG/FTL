@@ -1,17 +1,17 @@
-#define l_engine_speed 5 //analog pin controlling speed of left engine
-#define r_engine_speed 6 //analog pin controlling speed of right engine
+#define l_engine_speed 9 //analog pin controlling speed of left engine
+#define r_engine_speed 10 //analog pin controlling speed of right engine
 
-#define l_engine_dir1 8 // pin 1 controlling left engine
-#define l_engine_dir2 9 // pin 2 controlling left engine
-#define r_engine_dir1 10 // pin 1 controlling right engine
-#define r_engine_dir2 11 // pin 2 controlling right engine
+#define l_engine_dir1 3 // pin 1 controlling left engine
+#define l_engine_dir2 4 // pin 2 controlling left engine
+#define r_engine_dir1 5 // pin 1 controlling right engine
+#define r_engine_dir2 6 // pin 2 controlling right engine
 
 #define changeColor 1 // switch black and white
 
 #define topSpeed 150 
 #define maxTurn 150
 
-int sensorPorts[] = {4, 2, 3, 13, 7}; //ports number of sensors
+int sensorPorts[] = {8, 6, 7, 13, 12}; //ports number of sensors
 int sensorCount = 5; 
 
 int kp = maxTurn/2; // proportional ratio
