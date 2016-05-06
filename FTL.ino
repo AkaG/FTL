@@ -181,45 +181,45 @@ void calcError(){
    int posRight = 10;
 
    // left side
-   for(int i = sensorCount/2 - 1; i >= 0; i--){    //czytaj sensory po lewej
-      sum += mxor(changeColor, digitalRead(sensorPorts[i])); // liczba aktywnych sensorow
-      if(mxor(changeColor, digitalRead(sensorPorts[i])) == 1){ // ustal ktory jest aktywny
+   for(int i = sensorCount/2 - 1; i >= 0; i--){    //read left sensors
+      sum += mxor(changeColor, digitalRead(sensorPorts[i])); // number of active left side sensors
+      if(mxor(changeColor, digitalRead(sensorPorts[i])) == 1){ // which sensor is active
         posLeft = i - sensorCount/2;
       }
    }
 
    //right side
-   for(int i = sensorCount/2 + (sensorCount % 2); i < sensorCount; i++){   //czytaj sensory po prawej
-      sum += mxor(changeColor, digitalRead(sensorPorts[i]));
-      if(mxor(changeColor, digitalRead(sensorPorts[i])) == 1){
+   for(int i = sensorCount/2 + (sensorCount % 2); i < sensorCount; i++){   //read right sensors
+      sum += mxor(changeColor, digitalRead(sensorPorts[i])); // number of active right side sensors
+      if(mxor(changeColor, digitalRead(sensorPorts[i])) == 1){ // which sensor is active
         posRight = i - sensorCount/2;
       }
    }
 
 
-   if(sum == 0){ // jesli zaden czyjnik nie jest aktywny
+   if(sum == 0){ // if no sensor are active
       if(lastError < 0){
         error = -sensorCount;
       }else{
         error = sensorCount;
       }
    }else{
-       if((posLeft != 10) && (posRight != 10)){ // jesli sa aktywne po lewej i prawej
+       if((posLeft != 10) && (posRight != 10)){ // if sensors are active on both sides
          error = 0;
        }
        else{
-          if(posRight != 10){
+          if(posRight != 10){ //if sensors are active on right side
             error = posRight;
           }
           else{
-            if(posLeft != 10){
+            if(posLeft != 10){ //if sensors are active on left side
               error = posLeft;
             }
           }
        }
    }
 
-    if(sensorCount % 2 == 1){
+    if(sensorCount % 2 == 1){ //if center sensor is active go straight on
      if(mxor(changeColor, digitalRead(sensorPorts[sensorCount/2])) == 1){
       error = 0;
      }
