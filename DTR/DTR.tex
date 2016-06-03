@@ -28,7 +28,6 @@
 % kilka definicji
 \graphicspath{{./images/}}
 \def\SCALE{0.6}
-\def\SCAL2{0.2}
 \hypersetup{ % coby ładnie wyglądało
     colorlinks,
     citecolor=black,
@@ -45,7 +44,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\SCALE
-	\paperwidth]{temp}
+	\paperwidth]{Pszemeg}
 	\caption{Pszemeg}
 \end{figure}
 
@@ -84,7 +83,7 @@ Niestety, ale duża masa, czujniki położone blisko osi skrętnej oraz gotowe p
 	\hline
 	nazwa 										& cena			\\ \hline
 	2 x silnik 9V z przekładniami i kołami 		& 16,5			\\
-	5 x czujnik									& 9,7			\\
+	5 x czujnik	TCRT5000 IR						& 9,7			\\
 	podwozie										& 30				\\
 	mostek h L289N								& 6				\\
 	atmega 328P									& 6				\\
@@ -231,7 +230,7 @@ Niestety, ale duża masa, czujniki położone blisko osi skrętnej oraz gotowe p
 
 \begin{figure}[H]
 	\subsubsection{czujnik}
-	Czujnik wyposażony jest w diodę LED, którą podświetla trasę. Unika tym poleganiu na zewnętrznych źródłach światła. Czujnik wyposażony jest w przerzutnik schmitta, który niestety bardziej przeszkadza niż pomaga. Lepiej jest wykorzystać czujniki w pełni analogowe. Czujnik ma również diodę diagnostyczną, która świeci w świetle widzialnym aby ułatwić diagnozowanie.
+	Czujnik wyposażony jest w diodę LED, którą podświetla trasę. Unika tym poleganiu na zewnętrznych źródłach światła. Następnie mierzy wartość światła odbitego. Działa w podczerwieni. Czujnik wyposażony jest w przerzutnik schmitta, który niestety bardziej przeszkadza niż pomaga. Lepiej jest wykorzystać czujniki w pełni analogowe. Czujnik ma również diodę diagnostyczną, która świeci w świetle widzialnym aby ułatwić diagnozowanie.
 	
 	\centering
 	\includegraphics[width=\SCALE
@@ -366,120 +365,8 @@ Elementy należy przylutować do płytki. Zapewnia to dobre elektryczne połącz
 \section{Program}
 
 Program działa jak regulator PID. Jednak z częścią całkującą pojawiły się pewne problemy dlatego czasem dobrze jest jest ograniczyć go do sterownika PI.
-\lstset {language=C++}
-\begin{lstlisting}
-int l_engine_speed = 5;
-int r_engine_speed = 6;
 
-int l_engine_dir1 = 8;
-int l_engine_dir2 = 9;
-int r_engine_dir1 = 10;
-int r_engine_dir2 = 11;
-
-int sensor1Port = 12;
-int sensor2Port = 13;
-
-int isBlack = 1;
-
-// the setup function runs once when you press reset or power the board
-void setup() {
-  Serial.begin(9600);
-  
-  pinMode(l_engine_speed, OUTPUT);
-  pinMode(r_engine_speed, OUTPUT);
-  pinMode(l_engine_dir1, OUTPUT);
-  pinMode(l_engine_dir2, OUTPUT);
-  pinMode(r_engine_dir1, OUTPUT);
-  pinMode(r_engine_dir2, OUTPUT);
-  pinMode(sensor1Port, INPUT);
-  pinMode(sensor2Port, INPUT);
-}
-
-void ride(int dir, int ftlSpeedl, int ftlSpeedr){ //0-stop, 1-forward, 2-backward, 3-FB, 4-BF
-  if(dir == 0){
-     digitalWrite(l_engine_dir1, LOW);
-     digitalWrite(l_engine_dir2, LOW);
-
-     digitalWrite(r_engine_dir1, LOW);
-     digitalWrite(r_engine_dir2, LOW);
-  }
-  if(dir == 1){
-    digitalWrite(l_engine_dir1, LOW);
-    digitalWrite(l_engine_dir2, HIGH);
-
-    digitalWrite(r_engine_dir1, LOW);
-    digitalWrite(r_engine_dir2, HIGH);
-
-    analogWrite(l_engine_speed, ftlSpeedl);
-    analogWrite(r_engine_speed, ftlSpeedr);
-  }
-   if(dir == 2){
-    digitalWrite(l_engine_dir1, HIGH);
-    digitalWrite(l_engine_dir2, LOW);
-
-    digitalWrite(r_engine_dir1, HIGH);
-    digitalWrite(r_engine_dir2, LOW);
-
-    
-    analogWrite(l_engine_speed, ftlSpeedl);
-    analogWrite(r_engine_speed, ftlSpeedr);
-  }
-   if(dir == 3){
-    digitalWrite(l_engine_dir1, HIGH);
-    digitalWrite(l_engine_dir2, LOW);
-
-    digitalWrite(r_engine_dir1, LOW);
-    digitalWrite(r_engine_dir2, HIGH);
-
-    
-    analogWrite(l_engine_speed, ftlSpeedl);
-    analogWrite(r_engine_speed, ftlSpeedr);
-  }
-   if(dir == 4){
-    digitalWrite(l_engine_dir1, LOW);
-    digitalWrite(l_engine_dir2, HIGH);
-
-    digitalWrite(r_engine_dir1, HIGH);
-    digitalWrite(r_engine_dir2, LOW);
-
-    
-    analogWrite(l_engine_speed, ftlSpeedl);
-    analogWrite(r_engine_speed, ftlSpeedr);
-  }
-}
-
-int prev1, prev2 = 0;
-
-// the loop function runs over and over again forever
-void loop() {
- int sensor1Val = digitalRead(sensor1Port);
- int sensor2Val = digitalRead(sensor2Port);
- if(sensor1Val == 1 and sensor2Val == 1){
-    ride(1,70,70);
- }else{
-  if(sensor1Val == 1 and sensor2Val == 0){
-    if(prev1 == 0 and prev2 == 0){
-      ride(1,70,70);
-      delay(200);
-    }
-    ride(1,40,70);
-  }
-  if(sensor1Val == 0 and sensor2Val == 1){
-    if(prev1 == 0 and prev2 == 0){
-      ride(1,70,70);
-      delay(200);
-    }
-    ride(1,70,40);
-  }
-  if(sensor1Val == 0 and sensor2Val == 0){
-    ride(0,100,100);
-  }
- }
- prev1 = sensor1Val;
- prev2 = sensor2Val;
- delay(100);
-}
-\end{lstlisting}
+\lstinputlisting[language=C++]{../FTL.ino}
 
 \section{Serwisowanie i konserwacja}
 Regularnego przeglądu wymagają czujniki. Robota wyposażyliśmy w system do ich regulacji. Wystarczą do tego obcęgi. Należy robota utrzymywać możliwie blisko trasy, ale tak by koła jej nie dotykały. Każdy z czujników na swojej wierzchniej stronie posiada czerwoną diodę LED, które poinformuje nas czy czujnik poprawnie wykrywa linię. Ważną kwestią jest grubość linii. Najlepsze wyniki uzyskaliśmy dla około 2.0cm. Aktualnie robot jest ustawiony na 1.5cm, które było na RoboDayu. Im szersza linia tym szerzej należy rozstawić trzy wewnętrzne czujniki.
