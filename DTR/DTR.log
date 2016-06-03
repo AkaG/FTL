@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.1.23)  3 JUN 2016 22:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.1.23)  3 JUN 2016 23:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1162,8 +1162,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 376.
 (./DTR.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 376.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 376.
-Package rerunfilecheck Info: File `DTR.out' has not changed.
-(rerunfilecheck)             Checksum: DA50245E429484C5B71C043641037131;1880.
+
+
+Package rerunfilecheck Warning: File `DTR.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `DTR.out':
+(rerunfilecheck)             Before: DA50245E429484C5B71C043641037131;1880
+(rerunfilecheck)             After:  CFE2B0DEC961281EF71323B927337321;1883.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 376.
  ) 
 Here is how much of TeX's memory you used:
@@ -1186,7 +1193,7 @@ hare/texmf-dist/fonts/type1/public/pl/plr17.pfb></usr/share/texmf-dist/fonts/ty
 pe1/public/pl/plr9.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plsy8.pfb><
 /usr/share/texmf-dist/fonts/type1/public/pl/plsy9.pfb></usr/share/texmf-dist/fo
 nts/type1/public/pl/plti9.pfb>
-Output written on DTR.pdf (25 pages, 15216411 bytes).
+Output written on DTR.pdf (25 pages, 15216410 bytes).
 PDF statistics:
  688 PDF objects out of 1000 (max. 8388607)
  620 compressed objects within 7 object streams

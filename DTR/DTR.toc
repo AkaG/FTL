@@ -6,7 +6,7 @@
 \contentsline {subsubsection}{\numberline {2.2.2}mostek H L298N}{5}{subsubsection.2.2.2}
 \contentsline {subsubsection}{\numberline {2.2.3}silnik}{6}{subsubsection.2.2.3}
 \contentsline {subsubsection}{\numberline {2.2.4}zaczepy}{7}{subsubsection.2.2.4}
-\contentsline {subsubsection}{\numberline {2.2.5}kolo}{9}{subsubsection.2.2.5}
+\contentsline {subsubsection}{\numberline {2.2.5}ko\IeC {\l }o}{9}{subsubsection.2.2.5}
 \contentsline {subsubsection}{\numberline {2.2.6}podstawa}{10}{subsubsection.2.2.6}
 \contentsline {subsubsection}{\numberline {2.2.7}czujnik}{13}{subsubsection.2.2.7}
 \contentsline {subsubsection}{\numberline {2.2.8}Mocowanie czujnika}{14}{subsubsection.2.2.8}
