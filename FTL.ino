@@ -8,20 +8,20 @@
 
 #define changeColor 1 // switch black and white
 
-#define topSpeed 190
-#define maxTurn 190
+#define topSpeed 70
+#define maxTurn 70
 
 int sensorPorts[] = {8, 6, 7, 13, 12}; //ports number of sensors
 int sensorCount = 5; 
 
-int kp = maxTurn/6; // proportional ratio
-int kd = 60; // derivative ratio
-int ki = 1; // integral ratio
-int kiMax = 60; //max integral
+int kp = topSpeed/4; // proportional ratio
+int kd = 40; // derivative ratio
+int ki = 0; // integral ratio
+int kiMax = 100; //max integral
 
 int kiJump = 1; //integral increment
 int kiSum = 0; // avg integral
-int kiDelay = 60; // integral delay
+int kiDelay = 100; // integral delay
 int kiLoop = 0; // loop
 
 int kdDelay = 350; // derivative delay
@@ -32,8 +32,8 @@ int kdLoop = 0; // loop
 int kalibracjaL = topSpeed; 
 int kalibracjaR = topSpeed;
 
-int zwolnij_m = 3;
-int zwolnij_d = 4;
+int zwolnij_m = 1;
+int zwolnij_d = 1;
 
 //start values
 int proportional = 0; 
@@ -65,12 +65,6 @@ void setup() {
 }
 
 void loop() {
-/*
-delay(100);
-for (int i = 0 ; i < 5 ; i++)
-  Serial.print(digitalRead(sensorPorts[i]));
- Serial.println();
-*/
  // calculate int, der
   calcError();
   
@@ -78,12 +72,10 @@ for (int i = 0 ; i < 5 ; i++)
   
 // integral delay
 
-  kiSum += error * kiJump;
+  kiSum += (error/2) * kiJump;
   if(kiLoop >= kiDelay){
     integral += kiSum / kiDelay;
     kiLoop = 0;
-    if(kiSum == 0)
-      integral = integral / 2;
     kiSum = 0;
   }
   kiLoop++;
@@ -119,11 +111,11 @@ for (int i = 0 ; i < 5 ; i++)
    if(proportional == 0){
       ride(1, speedL, speedR);
    }else{
-      if(turn == -maxTurn){
-        ride(3,topSpeed,topSpeed);
+      if(turn == (-maxTurn)){
+        ride(3,topSpeed+30,topSpeed);
       }else{
         if(turn == maxTurn){
-          ride(4,topSpeed,topSpeed);
+          ride(4,topSpeed,topSpeed+30);
         }else{
           ride(1, speedL*zwolnij_m/zwolnij_d, speedR*zwolnij_m/zwolnij_d);
         }
@@ -205,28 +197,33 @@ int mxor(int a, int b){
 void calcError(){
    int sum = 0;
    int pos = 0;
-
-   for(int i = 0; i  < sensorCount; i++){    //read left sensors
-      sum += mxor(changeColor, digitalRead(sensorPorts[i])); // number of active left side sensors
-      if(mxor(changeColor, digitalRead(sensorPorts[i])) == 1){ // which sensor is active
-        pos += (i - sensorCount/2)*2;
+   
+      if(mxor(changeColor, digitalRead(sensorPorts[0])) == 1){ // which sensor is active
+        pos += -6;
+        sum++;
       }
-   }
+      if(mxor(changeColor, digitalRead(sensorPorts[1])) == 1){ // which sensor is active
+        pos += -2;
+        sum++;
+      }
+      if(mxor(changeColor, digitalRead(sensorPorts[2])) == 1){ // which sensor is active
+        pos += 0;
+        sum++;
+      }
+      if(mxor(changeColor, digitalRead(sensorPorts[3])) == 1){ // which sensor is active
+        pos += 2;
+        sum++;
+      }
+      if(mxor(changeColor, digitalRead(sensorPorts[4])) == 1){ // which sensor is active
+        pos += 6;
+        sum++;
+      }
+      
    if(sum == 0){ // if no sensor is active
-      if(lastError < 0){
-        error = -6;
-      }else{
-        error = 6;
-      }
+      error = lastError;
    }else{
        error = pos/sum;
      }
-/*
-    if(sensorCount % 2 == 1){ //if center sensor is active go straight on
-     if(mxor(changeColor, digitalRead(sensorPorts[sensorCount/2])) == 1){
-      error = 0;
-     }
-   }
- */ 
+
    proportional = error;
 }   
