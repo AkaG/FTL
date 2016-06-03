@@ -363,9 +363,15 @@ W wytrawionej płytce należy wywiercić otwory montażowe. W tym celu należy u
 Elementy należy przylutować do płytki. Zapewnia to dobre elektryczne połączenie jak i przytwierdza elementy do płytki. Można użyć zwykłej kolbowej lutownicy. W celu poprawy jakości i komfortu lutowanie można zastosować kalafonie, jednak nie jest to niezbędne. Są dostępne cyny z topnikiem który ma ułatwić lutowanie.
 
 \section{Program}
+\subsection{Wgrywanie}
+Jeśli zakupiono atmega bez bootloader'a, należy go wgrać lub zdobyć układ z wgranym bootloader'em.
+Jest też opcja wgrywanie programu bezpośrednio.
+Jeśli układ ma bootload'er należy podłączyć port szeregowy poszczególnymi kabelkami. Znajduje się on po lewej od oscylatora. Wgrywanie przeprowadza się poprzez naciśnięcie wgraj w Arduino IDE.
 
+\subsection{Opis}
 Program działa jak regulator PID. Jednak z częścią całkującą pojawiły się pewne problemy dlatego czasem dobrze jest jest ograniczyć go do sterownika PI.
 
+\subsection{Kod}
 \lstinputlisting[language=C++]{../FTL.ino}
 
 \section{Serwisowanie i konserwacja}
