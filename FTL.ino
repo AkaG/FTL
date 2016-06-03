@@ -1,41 +1,42 @@
-#define l_engine_speed 10 //analog pin controlling speed of left engine
-#define r_engine_speed 9 //analog pin controlling speed of right engine
+#define l_engine_speed 10 //pin do kontroli predkosci lewego silnika
+#define r_engine_speed 9 //pin do kontroli predkosci prawego silnika
 
-#define l_engine_dir1 5 // pin 1 controlling left engine
-#define l_engine_dir2 4 // pin 2 controlling left engine
-#define r_engine_dir1 3 // pin 1 controlling right engine
-#define r_engine_dir2 2 // pin 2 controlling right engine
+#define l_engine_dir1 5 // pin do kontroli kierunku lewego silnika
+#define l_engine_dir2 4 // pin do kontroli kierunku lewego silnika
+#define r_engine_dir1 3 // pin do kontroli kierunku prawego silnika
+#define r_engine_dir2 2 // pin do kontroli kierunku prawego silnika
 
-#define changeColor 1 // switch black and white
+#define changeColor 1 // zamienia wychwytywanie koloru czarnego z bialym
 
-#define topSpeed 70
-#define maxTurn 70
+#define topSpeed 70 // max predkosc jazdy
+#define maxTurn 70 // max spowolnienie jednego kola do skretu 
 
-int sensorPorts[] = {8, 6, 7, 13, 12}; //ports number of sensors
-int sensorCount = 5; 
+int sensorPorts[] = {8, 6, 7, 13, 12}; //porty sensorow
+int sensorCount = 5; //liczba sensorow 
 
-int kp = topSpeed/4; // proportional ratio
-int kd = 40; // derivative ratio
-int ki = 0; // integral ratio
-int kiMax = 100; //max integral
+int kp = topSpeed/4; // wspolczynnik p
+int kd = 40; // wspolczynnik d
+int ki = 0; // wspolczynnik i
+int kiMax = 100; //max wspolczynnika i
 
-int kiJump = 1; //integral increment
-int kiSum = 0; // avg integral
-int kiDelay = 100; // integral delay
-int kiLoop = 0; // loop
+int kiJump = 1; //zwieksz wspolczynnik i o ten wspolczynnik
+int kiSum = 0; // zmienna do liczenia sredniej z kilku wspoilczynnikow i
+int kiDelay = 100; // opoznienie i
+int kiLoop = 0; // zmienna do petli
 
-int kdDelay = 350; // derivative delay
-int kdSum = 0; // avg derivative
-int kdLoop = 0; // loop
+int kdDelay = 350; // opoznienie d
+int kdSum = 0; // zmienna do liczenia sredniej z kilku wspoilczynnikow d
+int kdLoop = 0; // zmienna do petli
 
-// calibration of engines
+// kalibracja silnikow, jezeli mialyby nierowna moc
 int kalibracjaL = topSpeed; 
 int kalibracjaR = topSpeed;
 
-int zwolnij_m = 1;
-int zwolnij_d = 1;
+// zwalnianie na zakretach o ulamek
+int zwolnij_m = 1; // mnoznik
+int zwolnij_d = 1; // dzielmik
 
-//start values
+//wartosci poczatkowe wspolczynnikow
 int proportional = 0; 
 int derivative = 0;
 int integral = 0;
@@ -65,12 +66,13 @@ void setup() {
 }
 
 void loop() {
- // calculate int, der
+ // wylicz p
   calcError();
-  
+
+ // wylicz d
   derivative = error - lastError;
   
-// integral delay
+// opoznienie i
 
   kiSum += (error/2) * kiJump;
   if(kiLoop >= kiDelay){
@@ -86,7 +88,7 @@ void loop() {
   if(integral <= -kiMax){
     integral = -kiMax;
   }
-  // calculate turn
+  // wylicz skret
   int turn = proportional*kp + derivative*kd + integral*ki;
 
    if(turn >= maxTurn)
@@ -97,7 +99,7 @@ void loop() {
    int speedL=0;
    int speedR=0;
 
-  //calculate turn to wheels
+  //oblicz skret dla poszczegolnego kola
    if(turn>=0){
      speedL = topSpeed * kalibracjaL / topSpeed;
      speedR = ((topSpeed - turn)*kalibracjaR)/topSpeed;
@@ -107,7 +109,7 @@ void loop() {
      speedR = topSpeed * kalibracjaR / topSpeed;
    }
 
-  // move turn to wheels
+  // przekaz sterowanie na kola
    if(proportional == 0){
       ride(1, speedL, speedR);
    }else{
@@ -122,7 +124,7 @@ void loop() {
       }
    }
    
-// derivative delay
+// opoznienie d
    kdSum += error;
    if(kdLoop >= kdDelay){
       lastError = kdSum / kdDelay;
@@ -133,7 +135,8 @@ void loop() {
  
 }
 
-void ride(int dir, int ftlSpeedl, int ftlSpeedr){ //0-stop, 1-forward, 2-backward, 3-FB, 4-BF
+// funkcja do sterowania jazda
+void ride(int dir, int ftlSpeedl, int ftlSpeedr){ //0-stop, 1-do przodu, 2-do tylu, 3-lewe kolo do przodu, prawe do tylu, 4-lewe kolo do tylu, prawe do przodu
   if(dir == 0){
      digitalWrite(l_engine_dir1, LOW);
      digitalWrite(l_engine_dir2, LOW);
@@ -186,6 +189,7 @@ void ride(int dir, int ftlSpeedl, int ftlSpeedr){ //0-stop, 1-forward, 2-backwar
   }
 }
 
+//funkcja xor
 int mxor(int a, int b){
   if( a==b ){
     return 0;
@@ -194,32 +198,33 @@ int mxor(int a, int b){
   }
 }
 
+// wylicz odchylenie od prawidlowego kierunku jazdy i zapisz do p
 void calcError(){
    int sum = 0;
    int pos = 0;
    
-      if(mxor(changeColor, digitalRead(sensorPorts[0])) == 1){ // which sensor is active
+      if(mxor(changeColor, digitalRead(sensorPorts[0])) == 1){ // sprawdzenie sensora 1
         pos += -6;
         sum++;
       }
-      if(mxor(changeColor, digitalRead(sensorPorts[1])) == 1){ // which sensor is active
+      if(mxor(changeColor, digitalRead(sensorPorts[1])) == 1){ // sprawdzenie sensora 2
         pos += -2;
         sum++;
       }
-      if(mxor(changeColor, digitalRead(sensorPorts[2])) == 1){ // which sensor is active
+      if(mxor(changeColor, digitalRead(sensorPorts[2])) == 1){ // sprawdzenie sensora 3
         pos += 0;
         sum++;
       }
-      if(mxor(changeColor, digitalRead(sensorPorts[3])) == 1){ // which sensor is active
+      if(mxor(changeColor, digitalRead(sensorPorts[3])) == 1){ // sprawdzenie sensora 4
         pos += 2;
         sum++;
       }
-      if(mxor(changeColor, digitalRead(sensorPorts[4])) == 1){ // which sensor is active
+      if(mxor(changeColor, digitalRead(sensorPorts[4])) == 1){ // sprawdzenie sensora 5
         pos += 6;
         sum++;
       }
       
-   if(sum == 0){ // if no sensor is active
+   if(sum == 0){ // jezli zaden sensor nie jest aktywny
       error = lastError;
    }else{
        error = pos/sum;
