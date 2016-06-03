@@ -7,6 +7,21 @@
 \frenchspacing
 \usepackage{enumerate}
 \usepackage{graphicx}
+
+\usepackage{tabularx}
+
+\usepackage{listings} % do wstawienia kodu
+\usepackage{xcolor} % do wstawienia kodu
+\lstset { %
+    language=C++,
+    backgroundcolor=\color{black!5}, % set backgroundcolor
+    basicstyle=\footnotesize,% basic font setting
+    breaklines=true,                 % sets automatic line breaking
+    backgroundcolor=\color{white},
+    numbers=left,
+    frame=single,
+}
+
 \usepackage{pstricks-add} % do definicji
 \usepackage{float} % do obrazków
 \usepackage{hyperref} % linki
@@ -34,17 +49,17 @@
 	\caption{Pszemeg}
 \end{figure}
 
-\begin{tabular}{|l|l|l|}
+\begin{tabularx}{\textwidth}{|l|l|X|}
 \hline
 imie		& nazwisko		& przydział zadań \\ \hline
-Piotr	& Binkowski		&			\\
-Adam		& Ćwian			&			\\
-Paweł	& Miłończyk		&			\\
-Juliusz & Sałek			&			\\
+Piotr	& Binkowski		& zamawianie i kompletowanie podzespołów, projekt płytki drukowanej, nadzorowanie prac			\\
+Adam		& Ćwian			& wytrawianie płytki (termotransfer)			\\
+Paweł	& Miłończyk		& DTR, lutowanie płytki, trawienie płytki, wykonanie termometru odpornego na wrzątek			\\
+Juliusz & Sałek			& kapitan, wykonanie tras, DTR, fotorelacja, kąpiel płytki w roztworze			\\
 Patryk	& Scheffler		&			\\
-Jakub	& Stańczak		&			\\
-George	& ??? Portugalczyk			&			\\ \hline
-\end{tabular}
+Jakub	& Stańczak		& zaprogramowanie robota, wiercenie i czyszczenie płytki, system regulacji czujników			\\
+Jorge	& Abreau			& słuchanie i próba zrozumienia dzialania robota i kodu	\\ \hline
+\end{tabularx}
 \end{center}
 
 \tableofcontents
@@ -52,10 +67,13 @@ George	& ??? Portugalczyk			&			\\ \hline
 \listoffigures
 
 \section{Opis}
-Celem robota jest podążanie wyznaczoną linią. Jest w stanie pokonywać zakręty do 90$^\circ$ oraz skrzyżowania.
+Celem robota jest podążanie wyznaczoną linią. Jest w stanie pokonywać zakręty do 90$^\circ$ oraz skrzyżowania. Robot najlepiej radzi sobie na łukach, gdyż trzy środkowe czujniki są zbliżone do siebie co umożliwia mu szybkie wprowadzania korekt i płynną jazdę. Problematyczne są ostre zakręty, gdzie linia jest łapana dopiero przez zewnętrzne czujniki. Robot wtedy zwalnia i stara się wrócić na trasę środkowym czujnikiem. W przypadku wypadnięcia z trasy robot będzie wykonywał nawrót w tę stronę, gdzie ostatnio widział linię.
 
 Robot wykorzystuje pięć czujników. Dwa skrajne umieszczone są w znacznym oddaleniu i trochę z tyłu.
-Napęd robota wykonany jest z dwóch silników z przekładniami, umieszczonych z przodu pojazdu. Zasilany jest z 6 baterii AA. Czas działania jest szacowany na 2h.
+Napęd robota wykonany jest z dwóch silników z przekładniami, umieszczonych z przodu pojazdu. Zasilany jest z 6 baterii AA. Czas działania jest szacowany na 2h. Nie zdecydowaliśmy się na zakup akumulatorów, ze względu na wysoki ich koszt oraz wymóg posiadania specjalnej ładowarki. Tym sposobem robot kosztował nas zaledwie ok. 91.20zł.
+
+Niestety, ale duża masa, czujniki położone blisko osi skrętnej oraz gotowe podwozie skutecznie uniemożliwiły nam walkę o dobry czas. Postawiliśmy na dokładność i nasz robot, gdy był ukończony, nigdy nie wypadł z trasy. Wypadanie z trasy było charakterystyczne dla szybkich i małych robotów, które musiały wiele razy startować w eliminacjach by ukończyć trasę.
+
 \section{Elementy}
 \subsection{Tabela elementów}
 
@@ -313,7 +331,7 @@ Toner nie powinien łatwo schodzić z płytki, jeśli schodzi po przeciągnięci
 \subsubsection{Poprawki}
 
 \begin{figure}[H]
-Następnie trzeba usunąć papier kredowy. Można to zrobić w ciepłej wodzie z płynem do mycia naczyń, należy poczekać, aż nasiąknie. Kolejnie delikatnie go usuwamy. W niektórych miejscach nie pokrytych tonerem można znaleźć krede. Jest to wysoce niepożądane, gdyż kreda utrudni dostęp roztworu do trawienia. Można ją usunąć np. wykałaczką.
+Następnie trzeba usunąć papier kredowy. Można to zrobić w ciepłej wodzie z płynem do mycia naczyń, należy poczekać, aż nasiąknie. Kolejnie delikatnie go usuwamy. W niektórych miejscach nie pokrytych tonerem można znaleźć kredę. Jest to wysoce niepożądane, gdyż kreda utrudni dostęp roztworu do trawienia. Można ją usunąć np. wykałaczką.
 
 	\centering
 	\includegraphics[width=\SCALE
@@ -326,13 +344,13 @@ Jeśli w niektórych miejscach ścieżki się nie przeniosły można je poprawi�
 Jeśli termotransfer nie wyszedł po usunięciu tonera acetonem procedurę można rozpocząć od nowa.
 \subsection{Wytrawanie}
 
-Wytrawianie przeprowadziliśmy za pomocą roztworu nadsiarczanu sodowego b327. 0,1kg proszku należy rozpuścić w 0,5L wody. A następnie w temp. 50$^\circ$C przeprowadzić trawienie. Temperaturę można utrzymywać dolewając ciepłej wody do zewnętrznego pojemnika.
+Wytrawianie przeprowadziliśmy za pomocą roztworu nadsiarczanu sodowego b327. 0,1kg proszku należy rozpuścić w 0,5L wody. A następnie w temp. 40-50$^\circ$C przeprowadzić trawienie. Temperaturę można utrzymywać dolewając ciepłej wody do zewnętrznego pojemnika.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\SCALE
 	\paperwidth]{wanienka}
-	\caption{prowizorowana łaźnia laboratoryjna}
+	\caption{prowizoryczna łaźnia laboratoryjna}
 Przydatna może być lepsza izolacja naczynia zewnętrznego. Przedstawione naczynie dość szybko traci ciepło co wiąże się z dolewaniem dużych ilości ciepłej wody.
 \end{figure}
 
@@ -346,7 +364,126 @@ W wytrawionej płytce należy wywiercić otwory montażowe. W tym celu należy u
 Elementy należy przylutować do płytki. Zapewnia to dobre elektryczne połączenie jak i przytwierdza elementy do płytki. Można użyć zwykłej kolbowej lutownicy. W celu poprawy jakości i komfortu lutowanie można zastosować kalafonie, jednak nie jest to niezbędne. Są dostępne cyny z topnikiem który ma ułatwić lutowanie.
 
 \section{Program}
-\section{Serwisowanie i konserwacja}
 
+Program działa jak regulator PID. Jednak z częścią całkującą pojawiły się pewne problemy dlatego czasem dobrze jest jest ograniczyć go do sterownika PI.
+\lstset {language=C++}
+\begin{lstlisting}
+int l_engine_speed = 5;
+int r_engine_speed = 6;
+
+int l_engine_dir1 = 8;
+int l_engine_dir2 = 9;
+int r_engine_dir1 = 10;
+int r_engine_dir2 = 11;
+
+int sensor1Port = 12;
+int sensor2Port = 13;
+
+int isBlack = 1;
+
+// the setup function runs once when you press reset or power the board
+void setup() {
+  Serial.begin(9600);
+  
+  pinMode(l_engine_speed, OUTPUT);
+  pinMode(r_engine_speed, OUTPUT);
+  pinMode(l_engine_dir1, OUTPUT);
+  pinMode(l_engine_dir2, OUTPUT);
+  pinMode(r_engine_dir1, OUTPUT);
+  pinMode(r_engine_dir2, OUTPUT);
+  pinMode(sensor1Port, INPUT);
+  pinMode(sensor2Port, INPUT);
+}
+
+void ride(int dir, int ftlSpeedl, int ftlSpeedr){ //0-stop, 1-forward, 2-backward, 3-FB, 4-BF
+  if(dir == 0){
+     digitalWrite(l_engine_dir1, LOW);
+     digitalWrite(l_engine_dir2, LOW);
+
+     digitalWrite(r_engine_dir1, LOW);
+     digitalWrite(r_engine_dir2, LOW);
+  }
+  if(dir == 1){
+    digitalWrite(l_engine_dir1, LOW);
+    digitalWrite(l_engine_dir2, HIGH);
+
+    digitalWrite(r_engine_dir1, LOW);
+    digitalWrite(r_engine_dir2, HIGH);
+
+    analogWrite(l_engine_speed, ftlSpeedl);
+    analogWrite(r_engine_speed, ftlSpeedr);
+  }
+   if(dir == 2){
+    digitalWrite(l_engine_dir1, HIGH);
+    digitalWrite(l_engine_dir2, LOW);
+
+    digitalWrite(r_engine_dir1, HIGH);
+    digitalWrite(r_engine_dir2, LOW);
+
+    
+    analogWrite(l_engine_speed, ftlSpeedl);
+    analogWrite(r_engine_speed, ftlSpeedr);
+  }
+   if(dir == 3){
+    digitalWrite(l_engine_dir1, HIGH);
+    digitalWrite(l_engine_dir2, LOW);
+
+    digitalWrite(r_engine_dir1, LOW);
+    digitalWrite(r_engine_dir2, HIGH);
+
+    
+    analogWrite(l_engine_speed, ftlSpeedl);
+    analogWrite(r_engine_speed, ftlSpeedr);
+  }
+   if(dir == 4){
+    digitalWrite(l_engine_dir1, LOW);
+    digitalWrite(l_engine_dir2, HIGH);
+
+    digitalWrite(r_engine_dir1, HIGH);
+    digitalWrite(r_engine_dir2, LOW);
+
+    
+    analogWrite(l_engine_speed, ftlSpeedl);
+    analogWrite(r_engine_speed, ftlSpeedr);
+  }
+}
+
+int prev1, prev2 = 0;
+
+// the loop function runs over and over again forever
+void loop() {
+ int sensor1Val = digitalRead(sensor1Port);
+ int sensor2Val = digitalRead(sensor2Port);
+ if(sensor1Val == 1 and sensor2Val == 1){
+    ride(1,70,70);
+ }else{
+  if(sensor1Val == 1 and sensor2Val == 0){
+    if(prev1 == 0 and prev2 == 0){
+      ride(1,70,70);
+      delay(200);
+    }
+    ride(1,40,70);
+  }
+  if(sensor1Val == 0 and sensor2Val == 1){
+    if(prev1 == 0 and prev2 == 0){
+      ride(1,70,70);
+      delay(200);
+    }
+    ride(1,70,40);
+  }
+  if(sensor1Val == 0 and sensor2Val == 0){
+    ride(0,100,100);
+  }
+ }
+ prev1 = sensor1Val;
+ prev2 = sensor2Val;
+ delay(100);
+}
+\end{lstlisting}
+
+\section{Serwisowanie i konserwacja}
+Regularnego przeglądu wymagają czujniki. Robota wyposażyliśmy w system do ich regulacji. Wystarczą do tego obcęgi. Należy robota utrzymywać możliwie blisko trasy, ale tak by koła jej nie dotykały. Każdy z czujników na swojej wierzchniej stronie posiada czerwoną diodę LED, które poinformuje nas czy czujnik poprawnie wykrywa linię. Ważną kwestią jest grubość linii. Najlepsze wyniki uzyskaliśmy dla około 2.0cm. Aktualnie robot jest ustawiony na 1.5cm, które było na RoboDayu. Im szersza linia tym szerzej należy rozstawić trzy wewnętrzne czujniki.
+
+Baterie należy wymieniać po około 2 motogodzinach. Zalecamy wybór baterii alkaicznych AA o napięciu 1.5V - popularne "paluszki". Do pojemnika wchodzi 6 takich baterii i wszystkie są wymagane do poprawnej pracy silników i elektroniki. Silniki i elektronika są zasilane z jednego źródła i nie wykazaliśmy zakłóceń tym spowodowanych.
 
 \end{document}
