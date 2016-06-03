@@ -364,9 +364,9 @@ Elementy należy przylutować do płytki. Zapewnia to dobre elektryczne połącz
 
 \section{Program}
 \subsection{Wgrywanie}
-Jeśli zakupiono atmega bez bootloader'a, należy go wgrać lub zdobyć układ z wgranym bootloader'em.
+Jeśli zakupiono mikrokontroler atmega bez bootloader'a, należy go wgrać lub zdobyć układ z wgranym bootloader'em.
 Jest też opcja wgrywanie programu bezpośrednio.
-Jeśli układ ma bootload'er należy podłączyć port szeregowy poszczególnymi kabelkami. Znajduje się on po lewej od oscylatora. Wgrywanie przeprowadza się poprzez naciśnięcie wgraj w Arduino IDE.
+Jeśli układ ma bootload'er należy podłączyć programator (np. FT232RL) przez port szeregowy poszczególnymi kabelkami. Znajduje się on po lewej od oscylatora. Wgrywanie przeprowadza się poprzez naciśnięcie wgraj w Arduino IDE. Jeśli nie podłączono resetu (przez pin o nazwie DTR), układ należy ręcznie zresetować tuż przed wgrywaniem.
 
 \subsection{Opis}
 Program działa jak regulator PID. Jednak z częścią całkującą pojawiły się pewne problemy dlatego czasem dobrze jest jest ograniczyć go do sterownika PI.

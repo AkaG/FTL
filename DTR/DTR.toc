@@ -1,35 +1,35 @@
 \contentsline {section}{\numberline {1}Opis}{3}{section.1}
-\contentsline {section}{\numberline {2}Elementy}{3}{section.2}
-\contentsline {subsection}{\numberline {2.1}Tabela element\IeC {\'o}w}{3}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Opis element\IeC {\'o}w}{4}{subsection.2.2}
-\contentsline {subsubsection}{\numberline {2.2.1}atmega 328P}{4}{subsubsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2}mostek H L298N}{5}{subsubsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.3}silnik}{6}{subsubsection.2.2.3}
-\contentsline {subsubsection}{\numberline {2.2.4}zaczepy}{7}{subsubsection.2.2.4}
-\contentsline {subsubsection}{\numberline {2.2.5}ko\IeC {\l }o}{9}{subsubsection.2.2.5}
-\contentsline {subsubsection}{\numberline {2.2.6}podstawa}{10}{subsubsection.2.2.6}
-\contentsline {subsubsection}{\numberline {2.2.7}czujnik}{13}{subsubsection.2.2.7}
-\contentsline {subsubsection}{\numberline {2.2.8}Mocowanie czujnika}{14}{subsubsection.2.2.8}
-\contentsline {subsubsection}{\numberline {2.2.9}pojemnik na baterie}{15}{subsubsection.2.2.9}
-\contentsline {subsubsection}{\numberline {2.2.10}wtyczka}{16}{subsubsection.2.2.10}
-\contentsline {subsubsection}{\numberline {2.2.11}p\IeC {\l }ytka pcb}{17}{subsubsection.2.2.11}
-\contentsline {subsubsection}{\numberline {2.2.12}kondenstor}{18}{subsubsection.2.2.12}
-\contentsline {paragraph}{68nF}{18}{section*.3}
-\contentsline {paragraph}{100nF}{18}{section*.4}
-\contentsline {paragraph}{22pF}{18}{section*.5}
-\contentsline {subsubsection}{\numberline {2.2.13}przycisk monostabliny}{18}{subsubsection.2.2.13}
-\contentsline {subsubsection}{\numberline {2.2.14}stabilizator 7805}{18}{subsubsection.2.2.14}
-\contentsline {section}{\numberline {3}P\IeC {\l }ytka}{18}{section.3}
-\contentsline {subsection}{\numberline {3.1}Projekt}{18}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Termotransfer}{18}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}Przygotowania}{18}{subsubsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2}Termotransfer}{18}{subsubsection.3.2.2}
-\contentsline {subsubsection}{\numberline {3.2.3}Poprawki}{19}{subsubsection.3.2.3}
-\contentsline {subsection}{\numberline {3.3}Wytrawanie}{20}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Wiercenie}{20}{subsection.3.4}
-\contentsline {subsection}{\numberline {3.5}Lutowanie}{20}{subsection.3.5}
-\contentsline {section}{\numberline {4}Program}{21}{section.4}
-\contentsline {subsection}{\numberline {4.1}Wgrywanie}{21}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Opis}{21}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Kod}{21}{subsection.4.3}
-\contentsline {section}{\numberline {5}Serwisowanie i konserwacja}{25}{section.5}
+\contentsline {section}{\numberline {2}Elementy}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}Tabela element\IeC {\'o}w}{4}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Opis element\IeC {\'o}w}{5}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}atmega 328P}{5}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}mostek H L298N}{6}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}silnik}{7}{subsubsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.4}zaczepy}{8}{subsubsection.2.2.4}
+\contentsline {subsubsection}{\numberline {2.2.5}ko\IeC {\l }o}{10}{subsubsection.2.2.5}
+\contentsline {subsubsection}{\numberline {2.2.6}podstawa}{11}{subsubsection.2.2.6}
+\contentsline {subsubsection}{\numberline {2.2.7}czujnik}{14}{subsubsection.2.2.7}
+\contentsline {subsubsection}{\numberline {2.2.8}Mocowanie czujnika}{15}{subsubsection.2.2.8}
+\contentsline {subsubsection}{\numberline {2.2.9}pojemnik na baterie}{16}{subsubsection.2.2.9}
+\contentsline {subsubsection}{\numberline {2.2.10}wtyczka}{17}{subsubsection.2.2.10}
+\contentsline {subsubsection}{\numberline {2.2.11}p\IeC {\l }ytka pcb}{18}{subsubsection.2.2.11}
+\contentsline {subsubsection}{\numberline {2.2.12}kondenstor}{19}{subsubsection.2.2.12}
+\contentsline {paragraph}{68nF}{19}{section*.3}
+\contentsline {paragraph}{100nF}{19}{section*.4}
+\contentsline {paragraph}{22pF}{19}{section*.5}
+\contentsline {subsubsection}{\numberline {2.2.13}przycisk monostabliny}{19}{subsubsection.2.2.13}
+\contentsline {subsubsection}{\numberline {2.2.14}stabilizator 7805}{19}{subsubsection.2.2.14}
+\contentsline {section}{\numberline {3}P\IeC {\l }ytka}{19}{section.3}
+\contentsline {subsection}{\numberline {3.1}Projekt}{19}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Termotransfer}{19}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Przygotowania}{19}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Termotransfer}{19}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Poprawki}{20}{subsubsection.3.2.3}
+\contentsline {subsection}{\numberline {3.3}Wytrawanie}{21}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Wiercenie}{21}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Lutowanie}{21}{subsection.3.5}
+\contentsline {section}{\numberline {4}Program}{22}{section.4}
+\contentsline {subsection}{\numberline {4.1}Wgrywanie}{22}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Opis}{22}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Kod}{22}{subsection.4.3}
+\contentsline {section}{\numberline {5}Serwisowanie i konserwacja}{26}{section.5}
