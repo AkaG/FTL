@@ -8,7 +8,7 @@
 \contentsline {subsubsection}{\numberline {2.2.4}zaczepy}{8}{subsubsection.2.2.4}
 \contentsline {subsubsection}{\numberline {2.2.5}ko\IeC {\l }o}{10}{subsubsection.2.2.5}
 \contentsline {subsubsection}{\numberline {2.2.6}podstawa}{11}{subsubsection.2.2.6}
-\contentsline {subsubsection}{\numberline {2.2.7}czujnik}{14}{subsubsection.2.2.7}
+\contentsline {subsubsection}{\numberline {2.2.7}czujnik TCRT5000}{14}{subsubsection.2.2.7}
 \contentsline {subsubsection}{\numberline {2.2.8}Mocowanie czujnika}{15}{subsubsection.2.2.8}
 \contentsline {subsubsection}{\numberline {2.2.9}pojemnik na baterie}{16}{subsubsection.2.2.9}
 \contentsline {subsubsection}{\numberline {2.2.10}wtyczka}{17}{subsubsection.2.2.10}
@@ -27,7 +27,7 @@
 \contentsline {subsubsection}{\numberline {3.2.3}Poprawki}{20}{subsubsection.3.2.3}
 \contentsline {subsection}{\numberline {3.3}Wytrawanie}{21}{subsection.3.3}
 \contentsline {subsection}{\numberline {3.4}Wiercenie}{21}{subsection.3.4}
-\contentsline {subsection}{\numberline {3.5}Lutowanie}{21}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.5}Lutowanie}{22}{subsection.3.5}
 \contentsline {section}{\numberline {4}Program}{22}{section.4}
 \contentsline {subsection}{\numberline {4.1}Wgrywanie}{22}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Opis}{22}{subsection.4.2}
