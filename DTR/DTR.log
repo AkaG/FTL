@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.1.23)  5 JUN 2016 23:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.1.23)  7 JUN 2016 22:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -933,14 +933,14 @@ LaTeX Info: Redefining \nameref on input line 38.
 \@outlinefile=\write3
 \openout3 = `DTR.out'.
 
- <./images/logoakd.png, id=132, 1937.2375pt x 464.73625pt>
+ <./images/logoakd.png, id=136, 1937.2375pt x 464.73625pt>
 File: ./images/logoakd.png Graphic file (type png)
 
 <use ./images/logoakd.png>
 Package pdftex.def Info: ./images/logoakd.png used on input line 46.
 (pdftex.def)             Requested size: 358.50836pt x 86.00322pt.
 
-<./images/Pszemeg.jpg, id=133, 718.685pt x 632.3625pt>
+<./images/Pszemeg.jpg, id=137, 718.685pt x 632.3625pt>
 File: ./images/Pszemeg.jpg Graphic file (type jpg)
 
 <use ./images/Pszemeg.jpg>
@@ -981,42 +981,42 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 134.
 
-<./images/plytkaGotowa.jpg, id=231, 3276.24pt x 2457.18pt>
+<./images/plytkaGotowa.jpg, id=236, 3276.24pt x 2457.18pt>
 File: ./images/plytkaGotowa.jpg Graphic file (type jpg)
 
 <use ./images/plytkaGotowa.jpg>
 Package pdftex.def Info: ./images/plytkaGotowa.jpg used on input line 144.
 (pdftex.def)             Requested size: 358.50836pt x 268.86588pt.
  [4]
-<./images/mostek.jpg, id=236, 887.315pt x 1312.905pt>
+<./images/mostek.jpg, id=241, 887.315pt x 1312.905pt>
 File: ./images/mostek.jpg Graphic file (type jpg)
 
 <use ./images/mostek.jpg>
 Package pdftex.def Info: ./images/mostek.jpg used on input line 166.
 (pdftex.def)             Requested size: 358.50836pt x 530.46153pt.
  [5 <./images/plytkaGotowa.jpg>]
-<./images/silnik-bok.jpg, id=242, 1654.18pt x 1284.8pt>
+<./images/silnik-bok.jpg, id=247, 1654.18pt x 1284.8pt>
 File: ./images/silnik-bok.jpg Graphic file (type jpg)
 
 <use ./images/silnik-bok.jpg>
 Package pdftex.def Info: ./images/silnik-bok.jpg used on input line 176.
 (pdftex.def)             Requested size: 358.50836pt x 278.44193pt.
 
-<./images/silnik-gora.jpg, id=243, 1497.595pt x 1280.785pt>
+<./images/silnik-gora.jpg, id=248, 1497.595pt x 1280.785pt>
 File: ./images/silnik-gora.jpg Graphic file (type jpg)
 
 <use ./images/silnik-gora.jpg>
 Package pdftex.def Info: ./images/silnik-gora.jpg used on input line 182.
 (pdftex.def)             Requested size: 358.50836pt x 306.59341pt.
  [6 <./images/mostek.jpg>]
-<./images/trzymacze.jpg, id=248, 682.55pt x 907.39pt>
+<./images/trzymacze.jpg, id=253, 682.55pt x 907.39pt>
 File: ./images/trzymacze.jpg Graphic file (type jpg)
 
 <use ./images/trzymacze.jpg>
 Package pdftex.def Info: ./images/trzymacze.jpg used on input line 196.
 (pdftex.def)             Requested size: 358.50836pt x 476.60841pt.
 
-<./images/mocowanieSilnika.jpg, id=249, 638.385pt x 915.42pt>
+<./images/mocowanieSilnika.jpg, id=254, 638.385pt x 915.42pt>
 File: ./images/mocowanieSilnika.jpg Graphic file (type jpg)
 
 <use ./images/mocowanieSilnika.jpg>
@@ -1024,49 +1024,49 @@ Package pdftex.def Info: ./images/mocowanieSilnika.jpg used on input line 204.
 (pdftex.def)             Requested size: 358.50836pt x 514.0844pt.
  [7 <./images/silnik-bok.jpg> <./images/silnik-gora.jpg>] [8 <./images/trzymacz
 e.jpg>]
-<./images/kolo.jpg, id=259, 983.675pt x 1288.815pt>
+<./images/kolo.jpg, id=264, 983.675pt x 1288.815pt>
 File: ./images/kolo.jpg Graphic file (type jpg)
  <use ./images/kolo.jpg>
 Package pdftex.def Info: ./images/kolo.jpg used on input line 216.
 (pdftex.def)             Requested size: 358.50836pt x 469.71544pt.
 
 [9 <./images/mocowanieSilnika.jpg>]
-<./images/podstawa-1.jpg, id=264, 1951.29pt x 2601.72pt>
+<./images/podstawa-1.jpg, id=269, 1951.29pt x 2601.72pt>
 File: ./images/podstawa-1.jpg Graphic file (type jpg)
 
 <use ./images/podstawa-1.jpg>
 Package pdftex.def Info: ./images/podstawa-1.jpg used on input line 224.
 (pdftex.def)             Requested size: 358.50836pt x 477.97595pt.
  [10 <./images/kolo.jpg>]
-<./images/podstawa-2.jpg, id=269, 2198.2125pt x 1749.53625pt>
+<./images/podstawa-2.jpg, id=274, 2198.2125pt x 1749.53625pt>
 File: ./images/podstawa-2.jpg Graphic file (type jpg)
 
 <use ./images/podstawa-2.jpg>
 Package pdftex.def Info: ./images/podstawa-2.jpg used on input line 231.
 (pdftex.def)             Requested size: 358.50836pt x 285.32405pt.
  [11 <./images/podstawa-1.jpg>]
-<./images/podstawa-3.jpg, id=274, 1921.1775pt x 1412.27625pt>
+<./images/podstawa-3.jpg, id=279, 1921.1775pt x 1412.27625pt>
 File: ./images/podstawa-3.jpg Graphic file (type jpg)
 
 <use ./images/podstawa-3.jpg>
 Package pdftex.def Info: ./images/podstawa-3.jpg used on input line 238.
 (pdftex.def)             Requested size: 358.50836pt x 263.52972pt.
 
-<./images/podstawa-4.jpg, id=275, 2601.72pt x 1951.29pt>
+<./images/podstawa-4.jpg, id=280, 2601.72pt x 1951.29pt>
 File: ./images/podstawa-4.jpg Graphic file (type jpg)
 
 <use ./images/podstawa-4.jpg>
 Package pdftex.def Info: ./images/podstawa-4.jpg used on input line 245.
 (pdftex.def)             Requested size: 358.50836pt x 268.86147pt.
  [12 <./images/podstawa-2.jpg> <./images/podstawa-3.jpg>] <./images/czujnik.jpg
-, id=280, 1015.795pt x 1015.795pt>
+, id=285, 1015.795pt x 1015.795pt>
 File: ./images/czujnik.jpg Graphic file (type jpg)
 
 <use ./images/czujnik.jpg>
 Package pdftex.def Info: ./images/czujnik.jpg used on input line 256.
 (pdftex.def)             Requested size: 358.50836pt x 358.50954pt.
  [13 <./images/podstawa-4.jpg>]
-<./images/mocowanieCzujnika.jpg, id=286, 1188.44pt x 891.33pt>
+<./images/mocowanieCzujnika.jpg, id=291, 1188.44pt x 891.33pt>
 File: ./images/mocowanieCzujnika.jpg Graphic file (type jpg)
 
 <use ./images/mocowanieCzujnika.jpg>
@@ -1074,27 +1074,27 @@ Package pdftex.def Info: ./images/mocowanieCzujnika.jpg used on input line 267.
 
 (pdftex.def)             Requested size: 358.50836pt x 268.88353pt.
  [14 <./images/czujnik.jpg>]
-<./images/pojemnik-1.jpg, id=291, 1451.4225pt x 1300.86pt>
+<./images/pojemnik-1.jpg, id=296, 1451.4225pt x 1300.86pt>
 File: ./images/pojemnik-1.jpg Graphic file (type jpg)
 
 <use ./images/pojemnik-1.jpg>
 Package pdftex.def Info: ./images/pojemnik-1.jpg used on input line 280.
 (pdftex.def)             Requested size: 358.50836pt x 321.30385pt.
 
-<./images/pojemnik-2.jpg, id=292, 1433.355pt x 1291.82625pt>
+<./images/pojemnik-2.jpg, id=297, 1433.355pt x 1291.82625pt>
 File: ./images/pojemnik-2.jpg Graphic file (type jpg)
 
 <use ./images/pojemnik-2.jpg>
 Package pdftex.def Info: ./images/pojemnik-2.jpg used on input line 289.
 (pdftex.def)             Requested size: 358.50836pt x 323.09375pt.
  [15 <./images/mocowanieCzujnika.jpg>] [16 <./images/pojemnik-1.jpg>] <./images
-/zlaczka.jpg, id=301, 2601.72pt x 1951.29pt>
+/zlaczka.jpg, id=307, 2601.72pt x 1951.29pt>
 File: ./images/zlaczka.jpg Graphic file (type jpg)
 
 <use ./images/zlaczka.jpg>
 Package pdftex.def Info: ./images/zlaczka.jpg used on input line 298.
 (pdftex.def)             Requested size: 358.50836pt x 268.86147pt.
- <./images/plytka.jpg, id=302, 343.2825pt x 562.1pt>
+ <./images/plytka.jpg, id=308, 343.2825pt x 562.1pt>
 File: ./images/plytka.jpg Graphic file (type jpg)
 
 <use ./images/plytka.jpg>
@@ -1102,14 +1102,14 @@ Package pdftex.def Info: ./images/plytka.jpg used on input line 310.
 (pdftex.def)             Requested size: 358.50836pt x 587.0318pt.
  [17 <./images/pojemnik-2.jpg> <./images/zlaczka.jpg>] [18 <./images/plytka.jpg
 >]
-<./images/termotransfer-1.jpg, id=312, 3276.24pt x 2457.18pt>
+<./images/termotransfer-1.jpg, id=317, 3276.24pt x 2457.18pt>
 File: ./images/termotransfer-1.jpg Graphic file (type jpg)
 
 <use ./images/termotransfer-1.jpg>
 Package pdftex.def Info: ./images/termotransfer-1.jpg used on input line 345.
 (pdftex.def)             Requested size: 358.50836pt x 268.86588pt.
  [19]
-<./images/ZabrudzeniaKreda.png, id=321, 2111.89pt x 1589.94pt>
+<./images/ZabrudzeniaKreda.png, id=326, 2111.89pt x 1589.94pt>
 File: ./images/ZabrudzeniaKreda.png Graphic file (type png)
 
 <use ./images/ZabrudzeniaKreda.png>
@@ -1117,14 +1117,14 @@ Package pdftex.def Info: ./images/ZabrudzeniaKreda.png used on input line 356.
 (pdftex.def)             Requested size: 358.50836pt x 269.89806pt.
  [20 <./images/termotransfer-1.jpg> <./images/ZabrudzeniaKreda.png (PNG copy)>]
 
-<./images/wanienka.jpg, id=326, 3276.24pt x 2457.18pt>
+<./images/wanienka.jpg, id=331, 3276.24pt x 2457.18pt>
 File: ./images/wanienka.jpg Graphic file (type jpg)
 
 <use ./images/wanienka.jpg>
 Package pdftex.def Info: ./images/wanienka.jpg used on input line 370.
 (pdftex.def)             Requested size: 358.50836pt x 268.86588pt.
 
-<./images/wiercenie.jpg, id=327, 2055.68pt x 1156.32pt>
+<./images/wiercenie.jpg, id=332, 2055.68pt x 1156.32pt>
 File: ./images/wiercenie.jpg Graphic file (type jpg)
 
 <use ./images/wiercenie.jpg>
@@ -1144,22 +1144,22 @@ LaTeX Font Info:    External font `plex10' loaded for size
 LaTeX Font Info:    External font `plex10' loaded for size
 (Font)              <5> on input line 73.
  [23]
-[24] [25])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 406.
- [26]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 406.
+[24] [25]) [26]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 434.
+ [27]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 434.
  (./DTR.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 406.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 406.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 434.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 434.
 Package rerunfilecheck Info: File `DTR.out' has not changed.
-(rerunfilecheck)             Checksum: 8877EE730E6323EEFBE509BFB4FB0465;2058.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 406.
+(rerunfilecheck)             Checksum: B6717761C3A5FB7A8105352552118B12;2098.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 434.
  ) 
 Here is how much of TeX's memory you used:
- 17476 strings out of 493054
- 284155 string characters out of 6140586
+ 17479 strings out of 493054
+ 284182 string characters out of 6140586
  607974 words of memory out of 5000000
- 20376 multiletter control sequences out of 15000+600000
+ 20377 multiletter control sequences out of 15000+600000
  16243 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  47i,8n,95p,596b,2020s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1174,10 +1174,10 @@ lic/pl/plr10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plr17.pfb></usr/s
 hare/texmf-dist/fonts/type1/public/pl/plr9.pfb></usr/share/texmf-dist/fonts/typ
 e1/public/pl/plsy8.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plsy9.pfb><
 /usr/share/texmf-dist/fonts/type1/public/pl/plti9.pfb>
-Output written on DTR.pdf (26 pages, 15472532 bytes).
+Output written on DTR.pdf (27 pages, 15474741 bytes).
 PDF statistics:
- 708 PDF objects out of 1000 (max. 8388607)
- 638 compressed objects within 7 object streams
- 321 named destinations out of 1000 (max. 500000)
- 372 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 717 PDF objects out of 1000 (max. 8388607)
+ 646 compressed objects within 7 object streams
+ 323 named destinations out of 1000 (max. 500000)
+ 380 words of extra memory for PDF output out of 10000 (max. 10000000)
 

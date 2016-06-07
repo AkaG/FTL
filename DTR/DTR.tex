@@ -397,7 +397,35 @@ Program działa jak regulator PID. Jednak z częścią całkującą pojawiły si
 
 \subsection{Kod}
 \lstinputlisting[language=C++]{../FTL.ino}
+\section{Czas}
+\begin{center}
 
+
+\begin{tabular}{|l|l|}
+\hline
+czynność				& przybliżony czas(h)		\\ \hline
+projekt płytki			& ?							\\
+projekt robota			& ?							\\
+zakupy					& 1,5						\\
+program					& ?							\\
+testy					& 4							\\
+druk projektu			& 0,7						\\
+termotransfer			& 0,5						\\
+trawienie				& 0,5						\\
+wiercenie				& 0,7						\\
+lutowanie				& 1							\\
+składanie robota			& 0,4						\\
+pierwszy rozruch			& 1,5						\\
+dostosowanie czujników	& 3							\\
+
+\hline
+\end{tabular}
+\end{center}
+W wykonaniu można zrównoleglić  wykonanie płytki z składaniem. Pisanie kodu też może wykonywać inna osoba z grupy. Do dostosowanie czujników lepiej jednak mieć gotowy program i na bieżąco sprawdzać zachowanie robota.
+Trudno ocenić czas testowanie i pisania programu, gdyż czynności te przeplatały się.
+Jak można zauważyć dostosowanie czujników to bardzo czasochłonne zajęcie. Zabrało nam to więcej czasu gdyż okazało się, że na naszych trasach wzięliśmy trochę grubszą linię i próbowaliśmy uwzględnić to w kodzie.
+
+Pierwszy rozruch również sprawił problemy, gdyż prawdopodobnie nie wszystkie elementy były dobrze przylutowane. Dodatkowe problemy sprawił prawdopodobnie mikrokontroler do którego wgrywaliśmy bootload'er. Rozwiązaniem może być wzięcie z pewnego źródła gotowego mikroukładu z gotowym bootload'er.
 \section{Serwisowanie i konserwacja}
 Regularnego przeglądu wymagają czujniki. Robota wyposażyliśmy w system do ich regulacji. Wystarczą do tego obcęgi. Należy robota utrzymywać możliwie blisko trasy, ale tak by koła jej nie dotykały. Każdy z czujników na swojej wierzchniej stronie posiada czerwoną diodę LED, które poinformuje nas czy czujnik poprawnie wykrywa linię. Ważną kwestią jest grubość linii. Najlepsze wyniki uzyskaliśmy dla około 2.0cm. Aktualnie robot jest ustawiony na 1.5cm, które było na RoboDayu. Im szersza linia tym szerzej należy rozstawić trzy wewnętrzne czujniki.
 
