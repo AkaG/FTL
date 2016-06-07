@@ -13,13 +13,13 @@
 \usepackage{listings} % do wstawienia kodu
 \usepackage{xcolor} % do wstawienia kodu
 \lstset { %
-    language=C++,
-    backgroundcolor=\color{black!5}, % set backgroundcolor
-    basicstyle=\footnotesize,% basic font setting
-    breaklines=true,                 % sets automatic line breaking
-    backgroundcolor=\color{white},
-    numbers=left,
-    frame=single,
+	language=C++,
+	backgroundcolor=\color{black!5}, % set backgroundcolor
+	basicstyle=\footnotesize,% basic font setting
+	breaklines=true,                 % sets automatic line breaking
+	backgroundcolor=\color{white},
+	numbers=left,
+	frame=single,
 }
 
 \usepackage{pstricks-add} % do definicji
@@ -29,53 +29,53 @@
 \graphicspath{{./images/}}
 \def\SCALE{0.6}
 \hypersetup{ % coby ładnie wyglądało
-    colorlinks,
-    citecolor=black,
-    filecolor=black,
-    linkcolor=black,
-    urlcolor=black
+	colorlinks,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black
 }
 \begin{document}
 
 \begin{center}
 
 
-\begin{figure}[htp]
-	\centering
-	\includegraphics[width=\SCALE
-	\paperwidth]{logoakd}
-\end{figure}
+	\begin{figure}[htp]
+		\centering
+		\includegraphics[width=\SCALE
+		\paperwidth]{logoakd}
+	\end{figure}
 
 %\title{DTR Pszemeg}
 
 %\maketitle
-\vspace{0.5cm}
-\begin{LARGE}
-Pszemeg DTR
-\end{LARGE}
+	\vspace{0.5cm}
+	\begin{LARGE}
+		Pszemeg DTR
+	\end{LARGE}
 
-\vspace{0.5cm}
-\today
-\vspace{0.5cm}
+	\vspace{0.5cm}
+	\today
+	\vspace{0.5cm}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\SCALE
-	\paperwidth]{Pszemeg}
-	\caption{Pszemeg}
-\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\SCALE
+		\paperwidth]{Pszemeg}
+		\caption{Pszemeg}
+	\end{figure}
 
-\begin{tabularx}{\textwidth}{|l|l|X|}
-\hline
-imie		& nazwisko		& przydział zadań \\ \hline
-Piotr	& Binkowski		& zamawianie i kompletowanie podzespołów, projekt płytki drukowanej, nadzorowanie prac			\\
-Adam		& Ćwian			& wytrawianie płytki (termotransfer)			\\
-Paweł	& Miłończyk		& DTR, lutowanie płytki, trawienie płytki, wykonanie termometru odpornego na wrzątek			\\
-Juliusz & Sałek			& kapitan, wykonanie tras, DTR, fotorelacja, kąpiel płytki w roztworze			\\
-Patryk	& Scheffler		&			\\
-Jakub	& Stańczak		& zaprogramowanie robota, wiercenie i czyszczenie płytki, system regulacji czujników			\\
-Jorge	& Abreau			& słuchanie i próba zrozumienia dzialania robota i kodu	\\ \hline
-\end{tabularx}
+	\begin{tabularx}{\textwidth}{|l|l|X|}
+		\hline
+		imie		& nazwisko		& przydział zadań \\ \hline
+		Piotr	& Binkowski		& zamawianie i kompletowanie podzespołów, projekt płytki drukowanej, nadzorowanie prac			\\
+		Adam		& Ćwian			& wytrawianie płytki (termotransfer)			\\
+		Paweł	& Miłończyk		& DTR, lutowanie płytki, trawienie płytki, wykonanie termometru odpornego na wrzątek			\\
+		Juliusz & Sałek			& kapitan, wykonanie tras, DTR, fotorelacja, kąpiel płytki w roztworze			\\
+		Patryk	& Scheffler		&			\\
+		Jakub	& Stańczak		& zaprogramowanie robota, wiercenie i czyszczenie płytki, system regulacji czujników			\\
+		Jorge	& Abreau			& słuchanie i próba zrozumienia dzialania robota i kodu	\\ \hline
+	\end{tabularx}
 \end{center}
 
 \tableofcontents
@@ -95,34 +95,34 @@ Niestety, ale duża masa, czujniki położone blisko osi skrętnej oraz gotowe p
 
 \begin{center}
 
-\begin{tabular}{|l | c|}
+	\begin{tabular}{|l | c|}
 
-	\hline
-	nazwa 										& cena			\\ \hline
-	2 x silnik 9V z przekładniami i kołami 		& 16,5			\\
-	5 x czujnik	TCRT5000 IR						& 9,7			\\
-	podwozie										& 30				\\
-	mostek h L289N								& 6				\\
-	atmega 328P									& 6				\\
-	koszyk na 6 baterii							& 4				\\
-	wytrawiacz nadsiarczan sodowy b327			& 5,5			\\
-	pcb	7x9cm									& 2,5			\\
-	4 x kondensator 68nF							& --				\\
-	oscylator 16Mhz								& --				\\
-	2 x kondensator 22pF							& --				\\
-	4 x kondesator 100nF							& --				\\
-	stabilizator 7805							& 1				\\
-	przycisk monostabilny						& --				\\
-	gniazdo dil 28								& 1				\\
-	listwa kołkowa jednorzędowa					& --				\\
-	śruby i wiertła								& 5				\\
-	przewody										& 4				\\
-	żelazko										& --				\\
-	papier kredowy								& 0,2			\\
-	cyna											& małe ilości	\\
-	aceton										& małe ilości	\\
-	\hline
-\end{tabular}
+		\hline
+		nazwa 										& cena			\\ \hline
+		2 x silnik 9V z przekładniami i kołami 		& 16,5			\\
+		5 x czujnik	TCRT5000 IR						& 9,7			\\
+		podwozie										& 30				\\
+		mostek h L289N								& 6				\\
+		atmega 328P									& 6				\\
+		koszyk na 6 baterii							& 4				\\
+		wytrawiacz nadsiarczan sodowy b327			& 5,5			\\
+		pcb	7x9cm									& 2,5			\\
+		4 x kondensator 68nF							& --				\\
+		oscylator 16Mhz								& --				\\
+		2 x kondensator 22pF							& --				\\
+		4 x kondesator 100nF							& --				\\
+		stabilizator 7805							& 1				\\
+		przycisk monostabilny						& --				\\
+		gniazdo dil 28								& 1				\\
+		listwa kołkowa jednorzędowa					& --				\\
+		śruby i wiertła								& 5				\\
+		przewody										& 4				\\
+		żelazko										& --				\\
+		papier kredowy								& 0,2			\\
+		cyna											& małe ilości	\\
+		aceton										& małe ilości	\\
+		\hline
+	\end{tabular}
 
 \end{center}
 
@@ -130,15 +130,15 @@ Niestety, ale duża masa, czujniki położone blisko osi skrętnej oraz gotowe p
 
 \begin{figure}[H]
 	\subsubsection{atmega 328P}
-		\begin{itemize}
-			\item Wyprodukowany przez firmę Atmel.
-			\item Obudowa typu dip 28.
-			\item Architektura AVR RISC.
-			\item Napięcie 1,8V - 5,5V
-			\item 8 Mhz na wewnętrznym oscylatorze, możliwość zewnętrznego oscylatora.
-		\end{itemize}
+	\begin{itemize}
+		\item Wyprodukowany przez firmę Atmel.
+		\item Obudowa typu dip 28.
+		\item Architektura AVR RISC.
+		\item Napięcie 1,8V - 5,5V
+		\item 8 Mhz na wewnętrznym oscylatorze, możliwość zewnętrznego oscylatora.
+	\end{itemize}
 	Mikrokontroler jest zgodny z arduino, o ile poprawnie umieszczono oscylator. Jeśli oscylator nie działa mikrokontroler może być dalej zaprogramowany przez	Arduino IDE ale jako Atmega 8Mhz. Mikrokontroler został dobrany na podstawie ceny i dostępności IDE. Jest również dostępnych na niego wiele bibliotek które w tym projekcie okazały się nie potrzebne.
-	
+
 	\centering
 	\includegraphics[width=\SCALE
 	\paperwidth]{plytkaGotowa}
@@ -151,7 +151,7 @@ Niestety, ale duża masa, czujniki położone blisko osi skrętnej oraz gotowe p
 	\subsubsection{mostek H L298N}
 	Do wyjść OUT1 OUT2 należy podłączyć jeden silnik. Do OUT3 i OUT4 drugi. Jeśli silnik kręci się w złą stronę należy odwrócić połączenie.
 	Najbardziej skrajne piny (żółte oznaczenie) służą do sterowanie PWM. Czerwone i niebieskie (oznaczone w kodzie jako l\_engine\_dir i r\_engine\_dir) to kierunek obrotów oraz wybór hamulca. Przy podaniu zera na sterowanie PWM nie robi różnicy co poda się na pozostałe, silnik zostanie wyłączony.
-	
+
 	\begin{tabular}{|l|l|l|}
 		\hline
 		LOW & LOW & hamowanie \\
@@ -159,7 +159,7 @@ Niestety, ale duża masa, czujniki położone blisko osi skrętnej oraz gotowe p
 		LOW & HIGH & jazda w tył \\
 		HIGH & HIGH & hamowanie \\
 		\hline				
-	
+
 	\end{tabular}
 	\centering
 	\includegraphics[width=\SCALE
@@ -175,14 +175,14 @@ Niestety, ale duża masa, czujniki położone blisko osi skrętnej oraz gotowe p
 	\includegraphics[width=\SCALE
 	\paperwidth]{silnik-bok}
 	\caption{silnik bok}
-	
+
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=\SCALE
 		\paperwidth]{silnik-gora}
 		\caption{silnik góra}
 	\end{figure}
-	
+
 \end{figure}
 
 
@@ -190,12 +190,12 @@ Niestety, ale duża masa, czujniki położone blisko osi skrętnej oraz gotowe p
 \begin{figure}[H]
 	\subsubsection{zaczepy}
 	Przydatne przy mocowaniu silnika, dwa na każdy silnik, po obu stronach mocowane śrubami. W 			podwoziu znajduje się specjalne wycięcie po obu bokach.
-	
+
 	\centering
 	\includegraphics[width=\SCALE
 	\paperwidth]{trzymacze}
 	\caption{zaczepy}
-	
+
 
 \end{figure}
 \begin{figure}[H]
@@ -250,7 +250,8 @@ Niestety, ale duża masa, czujniki położone blisko osi skrętnej oraz gotowe p
 	\subsubsection{czujnik TCRT5000}
 	Czujnik wyposażony jest w diodę LED, którą podświetla trasę. Unika tym poleganiu na zewnętrznych źródłach światła. Następnie mierzy wartość światła odbitego. Działa w podczerwieni.
 	Wybrana wersja czujnika wyposażona jest w przerzutnik schmitta, który niestety bardziej przeszkadza niż pomaga. Lepiej jest wykorzystać czujniki w pełni analogowe. Czujnik ma również diodę diagnostyczną, która świeci w świetle widzialnym aby ułatwić diagnozowanie.
-	
+	Piny do których należy podłączyć czujniki można łatwo zmienić w programie.
+
 	\centering
 	\includegraphics[width=\SCALE
 	\paperwidth]{czujnik}
@@ -261,7 +262,7 @@ Niestety, ale duża masa, czujniki położone blisko osi skrętnej oraz gotowe p
 \begin{figure}[H]
 	\subsubsection{Mocowanie czujnika}
 	Czujnik zamocowany jest na pociętym pręcie i przykręcony do podwozia. Odległość czujników należy dobrać eksperymentalnie w zależności od podłoża.	
-	
+
 	\centering
 	\includegraphics[width=\SCALE
 	\paperwidth]{mocowanieCzujnika}
@@ -279,16 +280,16 @@ Niestety, ale duża masa, czujniki położone blisko osi skrętnej oraz gotowe p
 	\includegraphics[width=\SCALE
 	\paperwidth]{pojemnik-1}
 	\caption{pojemnik bok}
-	
 
-	
+
+
 \end{figure}
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=\SCALE
-		\paperwidth]{pojemnik-2}
-		\caption{pojemnik góra}
-	\end{figure}	
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\SCALE
+	\paperwidth]{pojemnik-2}
+	\caption{pojemnik góra}
+\end{figure}	
 
 
 \subsubsection{wtyczka}
@@ -303,7 +304,7 @@ Niestety, ale duża masa, czujniki położone blisko osi skrętnej oraz gotowe p
 \begin{figure}[H]
 
 	\subsubsection{płytka pcb}
-Używana do wyprowadzenia wyjść Atmegi oraz jako miejsce na stabilizator 5V kondensatory filtrujące,	oraz rezystor i przycisk do resetu. Łączy elementy. Wymiary 7x9cm.
+	Używana do wyprowadzenia wyjść Atmegi oraz jako miejsce na stabilizator 5V kondensatory filtrujące,	oraz rezystor i przycisk do resetu. Łączy elementy. Wymiary 7x9cm.
 
 	\centering
 	\includegraphics[width=\SCALE
@@ -311,19 +312,32 @@ Używana do wyprowadzenia wyjść Atmegi oraz jako miejsce na stabilizator 5V ko
 	\caption{Płytka PCB}
 \end{figure}
 \subsubsection{kondenstor}
-	\paragraph{68nF}
+\paragraph{68nF}
 Wykorzystywany jest do tłumienia zakłóceń powodowanych przez silnik. Można wykorzystać również kondesatory 100nF.
-	\paragraph{100nF}
-	Wykorzystywany jest do tłumienia zakłóceń w układzie zasilania. Jeden wykorzystany do resetu Atmegi.
-	\paragraph{22pF}
-	Wymagany przez oscylator.
+\paragraph{100nF}
+Wykorzystywany jest do tłumienia zakłóceń w układzie zasilania. Jeden wykorzystany do resetu Atmegi.
+\paragraph{22pF}
+Wymagany przez oscylator.
 \subsubsection{przycisk monostabliny}
-	Ręcznie aktywuje reset Atmegi.
+Ręcznie aktywuje reset Atmegi.
 \subsubsection{stabilizator 7805}
-	Dostarcza stabilne 5V dla zasilania czujników oraz Atmegi, .
-	
+Dostarcza stabilne 5V dla zasilania czujników oraz Atmegi, .
+
 \section{Płytka}
 \subsection{Projekt}
+Projekt został wykonany w kiCad oraz z użyciem programu freerouter.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\SCALE
+	\paperwidth]{pcb}
+	\caption{PCB projekt}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\SCALE
+	\paperwidth]{schemat}
+	\caption{schemat}
+\end{figure}
 \subsection{Termotransfer}
 \subsubsection{Przygotowania}
 Projekt należy wydrukować na papierze kredowym drukarką laserową. Uwaga na zachowanie skali wydruku. Następnie można przejść do przygotowanie miedzianej płytki. Należy oczyścić powierzchnie z tlenków wodnym papierem ściernym 1000. Kolejnie wyczyścić z zabrudzeń mocnym alkoholem. Tak przygotowana płytka jest gotowa na termotransfer.
@@ -349,7 +363,7 @@ Toner nie powinien łatwo schodzić z płytki, jeśli schodzi po przeciągnięci
 \subsubsection{Poprawki}
 
 \begin{figure}[H]
-Następnie trzeba usunąć papier kredowy. Można to zrobić w ciepłej wodzie z płynem do mycia naczyń, należy poczekać, aż nasiąknie. Kolejnie delikatnie go usuwamy. W niektórych miejscach nie pokrytych tonerem można znaleźć kredę. Jest to wysoce niepożądane, gdyż kreda utrudni dostęp roztworu do trawienia. Można ją usunąć np. wykałaczką.
+	Następnie trzeba usunąć papier kredowy. Można to zrobić w ciepłej wodzie z płynem do mycia naczyń, należy poczekać, aż nasiąknie. Kolejnie delikatnie go usuwamy. W niektórych miejscach nie pokrytych tonerem można znaleźć kredę. Jest to wysoce niepożądane, gdyż kreda utrudni dostęp roztworu do trawienia. Można ją usunąć np. wykałaczką.
 
 	\centering
 	\includegraphics[width=\SCALE
@@ -369,7 +383,7 @@ Wytrawianie przeprowadziliśmy za pomocą roztworu nadsiarczanu sodowego b327. 0
 	\includegraphics[width=\SCALE
 	\paperwidth]{wanienka}
 	\caption{prowizoryczna łaźnia laboratoryjna}
-Przydatna może być lepsza izolacja naczynia zewnętrznego. Przedstawione naczynie dość szybko traci ciepło co wiąże się z dolewaniem dużych ilości ciepłej wody.
+	Przydatna może być lepsza izolacja naczynia zewnętrznego. Przedstawione naczynie dość szybko traci ciepło co wiąże się z dolewaniem dużych ilości ciepłej wody.
 \end{figure}
 
 
@@ -377,12 +391,12 @@ Płytkę należy włożyć do roztworu i trzymać do zaniku miedzi nieprzykrytej
 
 \subsection{Wiercenie}
 W wytrawionej płytce należy wywiercić otwory montażowe. W tym celu należy użyć wiertła 1mm. Aby wiertło nie ślizgało się po płytce można zrobić małe dziurki śrubką lub gwoździem.
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=\SCALE
-		\paperwidth]{wiercenie}
-		\caption{wiercenie}
-	\end{figure}	
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\SCALE
+	\paperwidth]{wiercenie}
+	\caption{wiercenie}
+\end{figure}	
 \subsection{Lutowanie}
 Elementy należy przylutować do płytki. Zapewnia to dobre elektryczne połączenie jak i przytwierdza elementy do płytki. Można użyć zwykłej kolbowej lutownicy. W celu poprawy jakości i komfortu lutowanie można zastosować kalafonie, jednak nie jest to niezbędne. Są dostępne cyny z topnikiem który ma ułatwić lutowanie.
 
@@ -401,25 +415,25 @@ Program działa jak regulator PID. Jednak z częścią całkującą pojawiły si
 \begin{center}
 
 
-\begin{tabular}{|l|l|}
-\hline
-czynność				& przybliżony czas(h)		\\ \hline
-projekt płytki			& ?							\\
-projekt robota			& ?							\\
-zakupy					& 1,5						\\
-program					& ?							\\
-testy					& 4							\\
-druk projektu			& 0,7						\\
-termotransfer			& 0,5						\\
-trawienie				& 0,5						\\
-wiercenie				& 0,7						\\
-lutowanie				& 1							\\
-składanie robota			& 0,4						\\
-pierwszy rozruch			& 1,5						\\
-dostosowanie czujników	& 3							\\
+	\begin{tabular}{|l|l|}
+		\hline
+		czynność				& przybliżony czas(h)		\\ \hline
+		projekt płytki			& ???						\\
+		projekt robota			& ???						\\
+		zakupy					& 1,5						\\
+		program					& ???						\\
+		testy					& 4							\\
+		druk projektu			& 0,7						\\
+		termotransfer			& 0,5						\\
+		trawienie				& 0,5						\\
+		wiercenie				& 0,7						\\
+		lutowanie				& 1							\\
+		składanie robota			& 0,4						\\
+		pierwszy rozruch			& 1,5						\\
+		dostosowanie czujników	& 3							\\
 
-\hline
-\end{tabular}
+		\hline
+	\end{tabular}
 \end{center}
 W wykonaniu można zrównoleglić  wykonanie płytki z składaniem. Pisanie kodu też może wykonywać inna osoba z grupy. Do dostosowanie czujników lepiej jednak mieć gotowy program i na bieżąco sprawdzać zachowanie robota.
 Trudno ocenić czas testowanie i pisania programu, gdyż czynności te przeplatały się.

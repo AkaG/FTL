@@ -21,16 +21,16 @@
 \contentsline {subsubsection}{\numberline {2.2.14}stabilizator 7805}{19}{subsubsection.2.2.14}
 \contentsline {section}{\numberline {3}P\IeC {\l }ytka}{19}{section.3}
 \contentsline {subsection}{\numberline {3.1}Projekt}{19}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Termotransfer}{19}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}Przygotowania}{19}{subsubsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2}Termotransfer}{19}{subsubsection.3.2.2}
-\contentsline {subsubsection}{\numberline {3.2.3}Poprawki}{20}{subsubsection.3.2.3}
-\contentsline {subsection}{\numberline {3.3}Wytrawanie}{21}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Wiercenie}{21}{subsection.3.4}
-\contentsline {subsection}{\numberline {3.5}Lutowanie}{22}{subsection.3.5}
-\contentsline {section}{\numberline {4}Program}{22}{section.4}
-\contentsline {subsection}{\numberline {4.1}Wgrywanie}{22}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Opis}{22}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Kod}{22}{subsection.4.3}
-\contentsline {section}{\numberline {5}Czas}{26}{section.5}
-\contentsline {section}{\numberline {6}Serwisowanie i konserwacja}{27}{section.6}
+\contentsline {subsection}{\numberline {3.2}Termotransfer}{20}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Przygotowania}{20}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Termotransfer}{20}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Poprawki}{21}{subsubsection.3.2.3}
+\contentsline {subsection}{\numberline {3.3}Wytrawanie}{22}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Wiercenie}{22}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Lutowanie}{23}{subsection.3.5}
+\contentsline {section}{\numberline {4}Program}{23}{section.4}
+\contentsline {subsection}{\numberline {4.1}Wgrywanie}{23}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Opis}{23}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Kod}{23}{subsection.4.3}
+\contentsline {section}{\numberline {5}Czas}{27}{section.5}
+\contentsline {section}{\numberline {6}Serwisowanie i konserwacja}{28}{section.6}
