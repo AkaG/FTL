@@ -32,5 +32,5 @@
 \contentsline {subsection}{\numberline {4.1}Wgrywanie}{24}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Opis}{24}{subsection.4.2}
 \contentsline {subsection}{\numberline {4.3}Kod}{24}{subsection.4.3}
-\contentsline {section}{\numberline {5}Czas}{28}{section.5}
+\contentsline {section}{\numberline {5}Czas wykonania}{28}{section.5}
 \contentsline {section}{\numberline {6}Serwisowanie i konserwacja}{28}{section.6}
