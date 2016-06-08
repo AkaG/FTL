@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.1.23)  8 JUN 2016 15:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.1.23)  9 JUN 2016 01:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1171,21 +1171,14 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 455.
  (./DTR.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 455.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 455.
-
-
-Package rerunfilecheck Warning: File `DTR.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `DTR.out':
-(rerunfilecheck)             Before: B6717761C3A5FB7A8105352552118B12;2098
-(rerunfilecheck)             After:  3777955C230E6EA205F37CB1C64A5E80;2108.
+Package rerunfilecheck Info: File `DTR.out' has not changed.
+(rerunfilecheck)             Checksum: 3777955C230E6EA205F37CB1C64A5E80;2108.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 455.
  ) 
 Here is how much of TeX's memory you used:
  17504 strings out of 493054
  284546 string characters out of 6140586
- 575974 words of memory out of 5000000
+ 575973 words of memory out of 5000000
  20389 multiletter control sequences out of 15000+600000
  16243 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1201,7 +1194,7 @@ lic/pl/plr10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plr17.pfb></usr/s
 hare/texmf-dist/fonts/type1/public/pl/plr9.pfb></usr/share/texmf-dist/fonts/typ
 e1/public/pl/plsy8.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plsy9.pfb><
 /usr/share/texmf-dist/fonts/type1/public/pl/plti9.pfb>
-Output written on DTR.pdf (29 pages, 15546206 bytes).
+Output written on DTR.pdf (29 pages, 15546237 bytes).
 PDF statistics:
  740 PDF objects out of 1000 (max. 8388607)
  661 compressed objects within 7 object streams
